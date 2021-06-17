@@ -8,8 +8,8 @@ echo "upgrade the system"
 echo "####################################"
 sudo yum upgrade -y
 echo "####################################"
-echo"disable SElinux (Security Enhanced Linux)"
-"echo "####################################""
+echo "disable SElinux (Security Enhanced Linux)"
+echo "####################################"
 sudo setenforce 0
 sudo sed -i 's/^SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
 echo "#####################################"
