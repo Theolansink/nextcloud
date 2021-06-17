@@ -13,7 +13,8 @@ echo"disable SElinux (Security Enhanced Linux)"
 sudo setenforce 0
 sudo sed -i 's/^SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
 echo "#####################################"
-echp "install php and webserver httpd"
+echo "install php and webserver httpd"
+echo "#####################################"
 sudo yum -y install epel-release yum-utils
 sudo yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 sudo yum-config-manager --disable remi-php54
@@ -46,7 +47,7 @@ sudo mkdir /var/www/html/nextcloud/data
 sudo chown apache:apache -R /var/www/html/nextcloud/data
 sudo chown apache:apache -R /var/www/html/nextcloud
 echo "####################################"
-echo "start and enable webserver
+echo "start and enable webserver"
 echo "####################################"
 sudo systemctl enable --now httpd
 sudo systemctl restart httpd
